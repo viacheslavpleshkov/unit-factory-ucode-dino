@@ -4,3 +4,4 @@
 /glade/*.gresource
 /vendor
 /build
+.DS_Store
