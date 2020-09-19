@@ -1,26 +1,34 @@
-package world.ucode;
+package world.ucode.game;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class Menu {
+public class Menu implements InterfaceMenu {
     public Stage primaryStage;
+    public Pane pane;
 
     /**
+     * Menu constructor
      *
+     * @param pane
      * @param primaryStage
      */
-    Menu(Stage primaryStage) {
+    public Menu(Pane pane, Stage primaryStage) {
+        this.pane = pane;
         this.primaryStage = primaryStage;
+        this.init();
     }
 
     /**
+     * Label Dino
      *
-     * @return
+     * @return Label
      */
+    @Override
     public Label label() {
         Label label = new Label();
 
@@ -33,9 +41,11 @@ public class Menu {
     }
 
     /**
+     * Start button
      *
-     * @return
+     * @return Button
      */
+    @Override
     public Button startBtn() {
         Button startBtn = new Button();
         startBtn.setText("Start");
@@ -54,9 +64,11 @@ public class Menu {
     }
 
     /**
+     * Result button
      *
-     * @return
+     * @return Button
      */
+    @Override
     public Button resultsBtn() {
         Button ResultsBtn = new Button();
 
@@ -76,9 +88,11 @@ public class Menu {
     }
 
     /**
+     * Exit button
      *
-     * @return
+     * @return Button
      */
+    @Override
     public Button exitBtn() {
         Button exitBtn = new Button();
         exitBtn.setText("Exit");
@@ -94,5 +108,16 @@ public class Menu {
             }
         });
         return exitBtn;
+    }
+
+    /**
+     * Installation
+     */
+    protected void init() {
+        this.pane.setStyle("-fx-background-color: linear-gradient(to bottom, #ff7f50, #6a5acd);");
+        this.pane.getChildren().add(this.label());
+        this.pane.getChildren().add(this.startBtn());
+        this.pane.getChildren().add(this.resultsBtn());
+        this.pane.getChildren().add(this.exitBtn());
     }
 }
