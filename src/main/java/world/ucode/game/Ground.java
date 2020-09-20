@@ -41,9 +41,7 @@ public class Ground implements InterfaceGround{
      */
     protected void animation() {
         Timeline t = new Timeline(
-                new KeyFrame(Duration.seconds(0), new KeyValue(groundOne.translateXProperty(), 0)),
                 new KeyFrame(Duration.seconds(9), new KeyValue(groundOne.translateXProperty(), -1200)),
-                new KeyFrame(Duration.seconds(0), new KeyValue(groundTwo.translateXProperty(), 0)),
                 new KeyFrame(Duration.seconds(9), new KeyValue(groundTwo.translateXProperty(), -1200))
         );
         t.setCycleCount(Timeline.INDEFINITE);

@@ -17,6 +17,9 @@ public class Game {
 
     public void start() {
         primaryStage.setScene(new GameWindow(this.root).create());
+        new Sun(root);
+        new Cloud(root);
+        new Score(root);
         new Ground(root);
         new Dino(root);
         primaryStage.centerOnScreen();

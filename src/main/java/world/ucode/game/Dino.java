@@ -9,8 +9,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
-import java.security.PublicKey;
-
 public class Dino implements InterfaceDino {
     protected Pane root;
     protected Image dinoImg = new Image("Dino-left-up.png");
