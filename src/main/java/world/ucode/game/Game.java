@@ -20,6 +20,7 @@ public class Game {
         new Ground(root);
         new Dino(root);
         primaryStage.centerOnScreen();
+        root.setStyle("-fx-background-color: linear-gradient(to bottom, #C0C0C0, #ffffff);");
     }
 
 }

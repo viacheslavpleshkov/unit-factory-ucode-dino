@@ -2,6 +2,7 @@ package world.ucode.game;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 
 public interface InterfaceMenu {
     /**
@@ -9,6 +10,15 @@ public interface InterfaceMenu {
      */
     public Label label();
 
+    /**
+     * Image ground
+     */
+    public ImageView groundImgView();
+
+    /**
+     * Image dino
+     */
+    public ImageView dinoImgView();
     /**
      * Start button
      */

@@ -1,20 +1,47 @@
 package world.ucode.game;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
+
+import java.security.PublicKey;
 
 public class Dino implements InterfaceDino {
     protected Pane root;
-    protected Image dinoImgOne = new Image("Dino-stand.png");
-    protected Image dinoImgTwo = new Image("Dino-stand.png");
-    protected ImageView dinoViewOne = new ImageView(this.dinoImgOne);
-    protected ImageView dinoViewTwo = new ImageView(this.dinoImgTwo);
+    protected Image dinoImg = new Image("Dino-left-up.png");
+    protected ImageView dinoView = new ImageView(this.dinoImg);
 
-    Dino(Pane pane){
+    Dino(Pane pane) {
         this.root = pane;
-        dinoViewOne.setLayoutY(735);
-        dinoViewOne.setLayoutX(10);
-        root.getChildren().add(this.dinoViewOne);
+        dinoView.setLayoutY(720);
+        dinoView.setLayoutX(10);
+        this.run();
+        this.root.getChildren().add(dinoView);
+    }
+
+    public void run() {
+        Timeline t = new Timeline(
+                new KeyFrame(Duration.millis(200), new EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent t) {
+                        dinoView.setImage(new Image("Dino-left-up.png"));
+                    }
+                }),
+                new KeyFrame(Duration.millis(400), new EventHandler<ActionEvent>() {
+                    public void handle(ActionEvent t) {
+                        dinoView.setImage(new Image("Dino-right-up.png"));
+                    }
+                })
+        );
+        t.setCycleCount(Timeline.INDEFINITE);
+        t.play();
+    }
+
+    public void jump() {
+
     }
 }

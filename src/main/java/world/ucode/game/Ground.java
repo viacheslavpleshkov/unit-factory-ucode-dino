@@ -27,9 +27,9 @@ public class Ground implements InterfaceGround{
      * Initiation ground
      */
     protected void init() {
-        groundOne.setLayoutY(780);
+        groundOne.setLayoutY(750);
         groundOne.setLayoutX(0);
-        groundTwo.setLayoutY(780);
+        groundTwo.setLayoutY(750);
         groundTwo.setLayoutX(1200);
         this.animation();
         root.getChildren().add(groundOne);
