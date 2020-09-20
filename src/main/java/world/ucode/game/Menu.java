@@ -35,7 +35,7 @@ public class Menu implements InterfaceMenu {
         Label label = new Label();
 
         label.setText("Dino");
-        label.setStyle("-fx-font: 45 arial;");
+        label.setStyle("-fx-font-family: 'Press Start 2P'; -fx-font-size: 25; -fx-text-fill: #535353;");
         label.setLayoutX(200);
         label.setLayoutY(50);
 
@@ -75,9 +75,9 @@ public class Menu implements InterfaceMenu {
     public Button startBtn() {
         Button startBtn = new Button();
         startBtn.setText("Start");
-        startBtn.setLayoutX(200);
-        startBtn.setLayoutY(200);
-        startBtn.setStyle("-fx-background-color: transparent; -fx-min-width: 100; -fx-min-height: 25; -fx-font-size: 20; -fx-border-radius: 10; -fx-border-color: black");
+        startBtn.setLayoutX(165);
+        startBtn.setLayoutY(150);
+        startBtn.setStyle("-fx-font-family: 'Press Start 2P'; -fx-background-color: transparent; -fx-min-width: 170; -fx-min-height: 25; -fx-text-fill: #535353; -fx-font-size: 20;");
         startBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -98,9 +98,9 @@ public class Menu implements InterfaceMenu {
         Button ResultsBtn = new Button();
 
         ResultsBtn.setText("Results");
-        ResultsBtn.setLayoutX(200);
-        ResultsBtn.setLayoutY(250);
-        ResultsBtn.setStyle("-fx-background-color: transparent; -fx-min-width: 100; -fx-min-height: 25; -fx-font-size: 20; -fx-border-radius: 10; -fx-border-color: black");
+        ResultsBtn.setLayoutX(165);
+        ResultsBtn.setLayoutY(200);
+        ResultsBtn.setStyle("-fx-font-family: 'Press Start 2P'; -fx-background-color: transparent; -fx-min-width: 170; -fx-min-height: 25; -fx-text-fill: #535353; -fx-font-size: 20;");
 
         ResultsBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -122,9 +122,9 @@ public class Menu implements InterfaceMenu {
         Button exitBtn = new Button();
         exitBtn.setText("Exit");
 
-        exitBtn.setLayoutX(200);
-        exitBtn.setLayoutY(300);
-        exitBtn.setStyle("-fx-background-color: transparent; -fx-min-width: 100; -fx-min-height: 25; -fx-font-size: 20; -fx-border-radius: 10; -fx-border-color: black");
+        exitBtn.setLayoutX(165);
+        exitBtn.setLayoutY(250);
+        exitBtn.setStyle("-fx-font-family: 'Press Start 2P'; -fx-background-color: transparent; -fx-min-width: 170; -fx-min-height: 25; -fx-text-fill: #535353; -fx-font-size: 20;");
 
         exitBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -139,7 +139,8 @@ public class Menu implements InterfaceMenu {
      * Installation
      */
     protected void init() {
-        this.pane.setStyle("-fx-background-color: linear-gradient(to bottom, #C0C0C0, #ffffff);");
+        this.pane.setStyle("-fx-background-color: linear-gradient(to bottom, #C0C0C0, #ffffff); -fx-text-fill: red;");
+        pane.getStylesheets().add("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
         this.pane.getChildren().add(this.label());
         this.pane.getChildren().add(this.startBtn());
         this.pane.getChildren().add(this.resultsBtn());
