@@ -3,7 +3,7 @@ package world.ucode.window;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 
-public class MainWindow implements Window {
+public class MainBasicWindow implements Window {
     private Pane pane;
 
     /**
@@ -11,7 +11,7 @@ public class MainWindow implements Window {
      *
      * @param pane
      */
-    public MainWindow(Pane pane) {
+    public MainBasicWindow(Pane pane) {
         this.pane = pane;
     }
 

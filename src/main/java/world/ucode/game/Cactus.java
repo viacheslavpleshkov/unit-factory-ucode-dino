@@ -7,7 +7,7 @@ import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 
-public class Cactus {
+public class Cactus implements InterfaceCactus{
     protected Pane root;
     protected ImageView cactus;
     protected Image cactusOne = new Image("Cactus-1.png");
@@ -81,7 +81,7 @@ public class Cactus {
             @Override
             public void handle(long now) {
                 for (ImageView i : listImageView) {
-                    i.setLayoutX(i.getLayoutX() - 3);
+                    i.setLayoutX(i.getLayoutX() - 2.2);
                     if (i.getLayoutX() < -50) {
                         i.setLayoutX(random());
                     }

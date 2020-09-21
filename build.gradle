@@ -16,7 +16,7 @@ dependencies {
 }
 
 application {
-    mainClassName = 'world.ucode.Main'
+    mainClassName = 'world.ucode.DinoGame'
 }
 
 javafx {

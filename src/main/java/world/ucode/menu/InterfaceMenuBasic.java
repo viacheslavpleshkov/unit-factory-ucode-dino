@@ -1,10 +1,10 @@
-package world.ucode.game;
+package world.ucode.menu;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
-public interface InterfaceMenu {
+public interface InterfaceMenuBasic {
     /**
      * Label Dino
      */

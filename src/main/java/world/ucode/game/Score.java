@@ -20,7 +20,7 @@ public class Score {
         this.time();
     }
 
-    public void time() {
+    protected void time() {
         Timeline t = new Timeline(
                 new KeyFrame(Duration.millis(100), new EventHandler<ActionEvent>() {
                     public void handle(ActionEvent t) {
