@@ -1,5 +1,6 @@
 package world.ucode.game;
 
+import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -13,16 +14,27 @@ public class Dino implements InterfaceDino {
     protected Pane root;
     protected Image dinoImg = new Image("Dino-left-up.png");
     protected ImageView dinoView = new ImageView(this.dinoImg);
+    public AnimationTimer animationTimer;
+    private boolean status = false;
 
+    /**
+     * Constructor Cactus
+     *
+     * @param pane
+     */
     Dino(Pane pane) {
         this.root = pane;
         dinoView.setLayoutY(720);
-        dinoView.setLayoutX(10);
-        this.run();
+        dinoView.setLayoutX(30);
+        this.animationRun();
+        this.animationJump();
         this.root.getChildren().add(dinoView);
     }
 
-    public void run() {
+    /**
+     * Animation Dino Run
+     */
+    public void animationRun() {
         Timeline t = new Timeline(
                 new KeyFrame(Duration.millis(200), new EventHandler<ActionEvent>() {
                     public void handle(ActionEvent t) {
@@ -39,7 +51,28 @@ public class Dino implements InterfaceDino {
         t.play();
     }
 
-    public void jump() {
-
+    /**
+     * Animation Dino Jump
+     *
+     * @return animationTimer
+     */
+    public AnimationTimer animationJump() {
+        animationTimer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                if (dinoView.getLayoutY() >= 550 && status == false) {
+                    dinoView.setLayoutY(dinoView.getLayoutY() - 5);
+                    if (dinoView.getLayoutY() <= 550)
+                        status = true;
+                } else if (status == true) {
+                    dinoView.setLayoutY(dinoView.getLayoutY() + 5);
+                    if (dinoView.getLayoutY() >= 720) {
+                        status = false;
+                        animationTimer.stop();
+                    }
+                }
+            }
+        };
+        return animationTimer;
     }
 }
