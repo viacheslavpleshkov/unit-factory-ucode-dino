@@ -24,13 +24,13 @@ Critical Thinking, Problem Solving, Analysis, Reasoning & Argumentation, Creativ
 ## Screenshots the program
 
 <a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino" target="_blank">
-  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots1.png?raw=true" height="100px">
+  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots1.png?raw=true">
 </a>
 <a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino" target="_blank">
-  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots2.png?raw=true" height="100px">
+  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots2.png?raw=true">
 </a>
 <a href="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino" target="_blank">
-  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots3.png?raw=true" height="100px">
+  <img src="https://github.com/viacheslavpleshkov/unit-factory-ucode-dino/blob/master/.git_images/screenshots3.png?raw=true">
 </a>
 
 
