@@ -48,19 +48,19 @@ public class MenuGameOver {
      * @return Button
      */
     public Button startBtn() {
-        ImageView restartIm = new ImageView(new Image("Game_restart.png"));
-        Button startBtn = new Button("Retry", restartIm);
-        startBtn.setLayoutY(200);
-        startBtn.setLayoutX(140);
-        startBtn.setStyle("-fx-font-family: 'Press Start 2P'; -fx-background-color: transparent; -fx-min-width: 170; -fx-min-height: 25; -fx-text-fill: #535353; -fx-font-size: 20;");
-        startBtn.setOnAction(new EventHandler<ActionEvent>() {
+        ImageView retryIm = new ImageView(new Image("Game_restart.png"));
+        Button retry = new Button("Retry", retryIm);
+        retry.setLayoutY(200);
+        retry.setLayoutX(140);
+        retry.setStyle("-fx-font-family: 'Press Start 2P'; -fx-background-color: transparent; -fx-min-width: 170; -fx-min-height: 25; -fx-text-fill: #535353; -fx-font-size: 20;");
+        retry.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 new Game(primaryStage).start();
             }
         });
 
-        return startBtn;
+        return retry;
     }
     /**
      * Installation
