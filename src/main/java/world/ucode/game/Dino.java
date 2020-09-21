@@ -10,12 +10,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
-public class Dino implements InterfaceDino {
+public class Dino {
     protected Pane root;
     protected Image dinoImg = new Image("Dino-left-up.png");
     protected ImageView dinoView = new ImageView(this.dinoImg);
     public AnimationTimer animationTimer;
-    private boolean status = false;
+    private boolean status = true;
 
     /**
      * Constructor Cactus
@@ -60,14 +60,14 @@ public class Dino implements InterfaceDino {
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
-                if (dinoView.getLayoutY() >= 550 && status == false) {
-                    dinoView.setLayoutY(dinoView.getLayoutY() - 5);
-                    if (dinoView.getLayoutY() <= 550)
-                        status = true;
-                } else if (status == true) {
+                if (dinoView.getLayoutY() >= 580 && status) {
+                    dinoView.setLayoutY(dinoView.getLayoutY() - 4);
+                    if (dinoView.getLayoutY() <= 580)
+                        status = false;
+                } else if (!status) {
                     dinoView.setLayoutY(dinoView.getLayoutY() + 5);
                     if (dinoView.getLayoutY() >= 720) {
-                        status = false;
+                        status = true;
                         animationTimer.stop();
                     }
                 }

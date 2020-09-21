@@ -1,4 +1,4 @@
-package world.ucode.game;
+package world.ucode.menu;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,18 +8,19 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import world.ucode.game.Game;
 
-public class Menu implements InterfaceMenu {
+public class MenuBasic implements InterfaceMenuBasic {
     public Stage primaryStage;
     public Pane pane;
 
     /**
-     * Menu constructor
+     * MenuBasic constructor
      *
      * @param pane
      * @param primaryStage
      */
-    public Menu(Pane pane, Stage primaryStage) {
+    public MenuBasic(Pane pane, Stage primaryStage) {
         this.pane = pane;
         this.primaryStage = primaryStage;
         this.init();
@@ -81,7 +82,7 @@ public class Menu implements InterfaceMenu {
         startBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                (new Game(primaryStage)).start();
+               new Game(primaryStage).start();
             }
         });
 
@@ -139,7 +140,7 @@ public class Menu implements InterfaceMenu {
      * Installation
      */
     protected void init() {
-        this.pane.setStyle("-fx-background-color: linear-gradient(to bottom, #C0C0C0, #ffffff); -fx-text-fill: red;");
+        this.pane.setStyle("-fx-background-color: linear-gradient(to bottom, #C0C0C0, #ffffff);");
         pane.getStylesheets().add("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
         this.pane.getChildren().add(this.label());
         this.pane.getChildren().add(this.startBtn());

@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
-public class Cloud {
+public class Cloud implements InterfaceCloud {
     protected Pane root;
     protected Image cloudMiniImg = new Image("Cloud.png");
     protected Image cloudBigImg = new Image("Cloud-min.png");
@@ -21,7 +21,7 @@ public class Cloud {
 
 
     /**
-     * Constructor
+     * Constructor Cloud
      *
      * @param pane Cloud
      */

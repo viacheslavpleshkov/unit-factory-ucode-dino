@@ -4,7 +4,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-public class Sun {
+public class Sun implements InterfaceSun{
     protected Pane root;
     protected Image sunImg = new Image("Sun.png");
     protected ImageView sunImgView = new ImageView(this.sunImg);
