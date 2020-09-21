@@ -13,8 +13,8 @@ public class Cloud {
     protected Image cloudMiniImg = new Image("Cloud.png");
     protected Image cloudBigImg = new Image("Cloud-min.png");
     protected ImageView cloudImageViewOne = new ImageView(this.cloudMiniImg);
-    protected ImageView cloudImageViewTwo = new ImageView(this.cloudBigImg);
-    protected ImageView cloudImageViewTree = new ImageView(this.cloudMiniImg);
+    protected ImageView cloudImageViewTwo = new ImageView(this.cloudMiniImg);
+    protected ImageView cloudImageViewTree = new ImageView(this.cloudBigImg);
     protected ImageView cloudImageViewFour = new ImageView(this.cloudMiniImg);
     protected ImageView cloudImageVieFive = new ImageView(this.cloudBigImg);
     protected ImageView cloudImageVieSix = new ImageView(this.cloudMiniImg);
@@ -23,7 +23,7 @@ public class Cloud {
     /**
      * Constructor
      *
-     * @param pane
+     * @param pane Cloud
      */
     public Cloud(Pane pane) {
         this.root = pane;
@@ -31,9 +31,18 @@ public class Cloud {
     }
 
     /**
-     * Initiation ground
+     * Initiation cloud
      */
     protected void init() {
+        this.setImageLayoutXY();
+        this.setAnimation();
+        this.setImage();
+    }
+
+    /**
+     * Images setLayoutX, setLayoutY
+     */
+    protected void setImageLayoutXY() {
         cloudImageViewOne.setLayoutX(700);
         cloudImageViewOne.setLayoutY(200);
 
@@ -51,8 +60,12 @@ public class Cloud {
 
         cloudImageVieSix.setLayoutX(3000);
         cloudImageVieSix.setLayoutY(130);
+    }
 
-        this.animation();
+    /**
+     * Set images in root
+     */
+    protected void setImage() {
         root.getChildren().add(cloudImageViewOne);
         root.getChildren().add(cloudImageViewTwo);
         root.getChildren().add(cloudImageViewTree);
@@ -65,7 +78,7 @@ public class Cloud {
     /**
      * Animation ground
      */
-    protected void animation() {
+    protected void setAnimation() {
         Timeline t = new Timeline(
                 new KeyFrame(Duration.seconds(10), new KeyValue(cloudImageViewOne.translateXProperty(), -1500)),
                 new KeyFrame(Duration.seconds(10), new KeyValue(cloudImageViewTwo.translateXProperty(), -1500)),
